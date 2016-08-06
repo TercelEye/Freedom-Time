@@ -17,6 +17,7 @@
               <h2>Are you a Mom or Dad with family?</h2>
               <h3>(And the pace of life is sometimes breathtaking)</h3>
               <p class="firstP">You are busy.  Maybe you are involved in sporting events with your kids 2 to 3 nights a week.  You’ve thought about a home-based business, but you’ve not found the right opportunity that can work with your schedule. </p>
+              <hr>
               <p class="secondP">Bring your busy schedule with you!  Let’s see how we might be able to simplify things a bit in your life.  Clink on the link below to learn more.</p>
             </div>
             <!-- wrapper --> 
@@ -69,6 +70,7 @@
             <div class="wrapper">
               <h2>Are you nearing retirement?</h2>
               <p class="firstP">You’ve worked all your life.  “Retirement” is close or perhaps the time is already upon you are open-minded to the right home based business.   The key for you is picking the right opportunity.  You need <span>products you can believe in</span> and an opportunity to work on <span>your</span> terms.</p>
+              <hr>
               <p class="secondP">Congratulations if you are in this stage in your life!  Click on the link below to get your questions answered and learn how this might enhance your retirement options.</p>
             </div>
             <!-- wrapper --> 
@@ -119,7 +121,7 @@
                       <input type="text" name="name" class="form-control" id="usr">
                     </div>
                     <div class="form-group">
-                      <label for="pwd">Email you got invited on:</label>
+                      <label for="pwd">Email:</label>
                       <input type="email" name="email" autocomplete="off"  value="{{ Request::input('email') }}" class="form-control" {{ (Request::input('email')!=""? 'readonly' : '') }} id="email">
                     </div>
                     <div class="form-group">
@@ -127,7 +129,7 @@
                       <input type="text" name="phone"  class="form-control" id="phone">
                     </div>
                     <div class="form-group">
-                      <label for="pwd">Secret Passcode:</label>
+                      <label for="pwd">Passcode:</label>
                       <input type="text" {{ (Request::input('code')!=""? 'readonly' : '') }}  name="secret" autocomplete="off" value="{{ Request::input('code') }}"  class="form-control" id="spass">
                     </div>
                     <a id="watch_video_submit" class="btn btn-info"><!-- <button class="btn btn-info">Submit</button> -->Submit</a>

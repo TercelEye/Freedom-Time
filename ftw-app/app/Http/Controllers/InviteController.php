@@ -87,56 +87,30 @@ class InviteController extends Controller
 	
 	public function send_affiliate(Request $request){
 		$user = \Auth::user();
-		
 		$validator =   Validator::make($request->all(), [
-			 'email' => 'required|email|unique:users',
-		 ],
-		 [ 
-		 	'email.unique' => 'This :attribute email already registered'
+			 'email' => 'required|email',
 		 ]);
 		 
-		 
-		  $invitation_exists = \App\Invitation::where('email', \Request::input('email') )
-						->where('user_id',$user->id)
-						->first();
-						
-		 $validator->after(function  ($validator) use ($invitation_exists){
-			if($invitation_exists != false)
-				$validator->errors()->add('email', 'Invitaion already Send' );
-		 });
-
-
 		if ($validator->fails()) {
 			//validation error
 			$data['error'] = $validator->errors()->all();
   			return \Response::json($data, 422 ); // Status code here
 		}
-		 
-	
-		//create invitaion
-		$pass_code = uniqid();
-		
-		$invitation = new Invitation;
-        $invitation->email = $request->email;
-		$invitation->secret_pascode = $pass_code;
-		$invitation->user_id = $user->id;
-        $invitation->is_affiliate = 1;
-		$invitation->save();
 		
 		//send email
-		$data['link'] = url('/');
+		$data['link'] = url('/register/'.$user->username);
 		$data['user'] = $user;
-		$data['pass_code'] = $pass_code;
-		$data['from'] = $user;
 		$data['to_email'] =$request->email;
-		Mail::send('emails.invitation', $data, function ($message) use ($request) {
+		Mail::send('emails.affiliate', $data, function ($message) use ($request) {
 			$message->from('noreply@freedomtimeandwealth.com', 'Freedom Time');
 			$message->to($request->email);
+			$message->subject('Become a Business Partner');
+			
 		});
 		
 		
 		//return 
-		$response['message'] = 'Invitation sent successfully';
+		$response['message'] = 'Affiliate link sent successfully';
 		$response['status']=true;
 		return \Response::json($response, 200 ); // Status code here
 

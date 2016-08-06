@@ -8,22 +8,29 @@
 <thead>
 	<tr> 
     	<th>ID</th> 
+           <th>Username</th>      
         <th>Name</th> 
         <th>Email</th> 
-        <th>Username</th> 
+        <th>Payment</th> 
         <th>Funds</th> 
      </tr>
     </thead>
     <tbody>
+    	@if($affilites !=false)
     	@foreach($affilites as $row)
         	<tr>
             	<td>{{ $row->id }}</td>
-                <td>{{ $row->user->fname }} {{ $row->user->lname }}</td>
-                <td>{{ $row->user->email }}</td>
-                <td>{{ $row->user->username }}</td>
-                <td>$ {{ $row->fund->balance }}</td>
+                <td>{{ $row->username }}</td>
+                <td>{{ $row->fname }} {{ $row->lname }}</td>
+                <td>{{ $row->email }}</td>
+                <td><strong>Payment profile id</strong> : {{ $row->paymentprofileid }} |
+                <strong>Profile id</strong> : {{ $row->profileid }}
+                </td>
+                
+                <td>$ {{ $row->fund->balance or '0' }}</td>
             </tr>
         @endforeach
+        @endif
     </tbody>
     
 </table>

@@ -21,7 +21,9 @@ class User extends Authenticatable
 		
     }
 	
-	
+	public function fund(){
+		return $this->belongsTo('\App\Fund','id','id');
+	}
 	
     /**
      * The attributes that are mass assignable.

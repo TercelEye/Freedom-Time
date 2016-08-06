@@ -77,6 +77,15 @@
                   
                  
                   <?php if($user == ""){?>
+                  
+                   <form role="form" method="post" action="{{ url('invitation/send_affiliate') }}" class="form-horizontal sendafflink">
+              <div class="form-group affliateSecondFormGroup">
+                  <input type="hidden" name="email" value="{{ $row->email }}"> 
+                 <input type="submit" id="submit" style="    font-size: 12px;
+    padding: 2px;" class="btn-sm btn btn-success" value="Send Affiliate Link">
+              </div>
+            </form>
+            
                  <?php /*?> <a href="#" class="btn btn-xs btn-success">Send Affiliate Link</a> <?php */?>
                   <?php } ?>
                   
@@ -86,4 +95,60 @@
               
             </tbody>
           </table>
-        </div>      
+        </div>  
+        
+        <script>
+		 $(".sendafflink").on("submit", function(){
+	event.preventDefault();
+   var form= $(this);
+	 // var $btn = (this).closest('#submit').button('loading')
+
+
+    $.ajax({
+        url     : form.attr("action"),
+        type    : form.attr("method"),
+        data    : form.serialize(),
+        dataType: "json",
+        success : function ( json ) 
+        {
+			 //$btn.button('reset')
+            toastr.success( json.message , "" );
+			//window.location.replace(json.url);
+			
+        },
+        error   : function ( jqXhr, json, errorThrown ) 
+        {
+			//$btn.button('reset')
+			 if(jqXhr.status  ==0) {
+				  toastr.error( 'could not connect to server' , "Connection Error " );
+				   
+			 }
+			 
+            var errors = jqXhr.responseJSON.error;
+            var errorsHtml= '';
+            $.each( errors, function( key, value ) {
+                errorsHtml += '<li>' + value + '</li>'; 
+            });
+			
+            toastr.error( errorsHtml , "Validation Error " );
+			 
+        }
+    })
+    .done(function(response)
+    {
+        //
+		
+		
+		
+    })
+    .fail(function( jqXHR, json ) 
+    {
+      
+    });
+    return false;
+
+ })
+ 
+ 
+
+            </script>    

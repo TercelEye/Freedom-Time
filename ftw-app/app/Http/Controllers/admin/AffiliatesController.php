@@ -10,8 +10,9 @@ use App\Http\Controllers\Controller;
 class AffiliatesController extends Controller
 {
     public function all(){
-		$affilites = \App\Affiliates::with('user')->with('fund')->get();
+		$affilites = \App\User::with(['fund'])->get();
 		$data['affilites']=$affilites;
+		//print_r($affilites);exit;
 		return view('admin/afiliates/all',$data);	
 	}
 }

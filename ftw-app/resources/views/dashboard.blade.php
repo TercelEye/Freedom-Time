@@ -173,15 +173,68 @@
               </form>
                <form role="form" method="post" action="{{ url('invitation/send_affiliate') }}" id="affiliate_form" class="form-horizontal invite_form">
               <div class="form-group affliateSecondFormGroup">
-                <label for="usr">To register a new affiliate, use this link</label>
-                  <input type="email" name="email" disabled style="display:inline-block" class="form-control" value="{{ url('register/'.$user->username) }}"> 
-              <?php /*?>   <input type="submit" id="submit" style="    font-size: 18px" class="btn-xs btn btn-success" value="Send Invitation"><?php */?>
+                <label for="usr">To register a new affiliate, enter their email address bellow</label>
+                  <input type="email" name="email"  placeholder="Ex : user@email.com" style="display:inline-block" class="form-control" value=""> 
+                 <input type="submit" id="submit" style="    font-size: 18px" class="btn-xs btn btn-success" value="Send Affiliate">
               </div>
             </form>
             <script type="text/javascript">
 			
 			
    $(".invite_form").on("submit", function(){
+	event.preventDefault();
+   var form= $(this);
+	 // var $btn = (this).closest('#submit').button('loading')
+
+
+    $.ajax({
+        url     : form.attr("action"),
+        type    : form.attr("method"),
+        data    : form.serialize(),
+        dataType: "json",
+        success : function ( json ) 
+        {
+			 //$btn.button('reset')
+			 load_my_candidates();
+            toastr.success( json.message , "" );
+			//window.location.replace(json.url);
+			
+        },
+        error   : function ( jqXhr, json, errorThrown ) 
+        {
+			//$btn.button('reset')
+			 if(jqXhr.status  ==0) {
+				  toastr.error( 'could not connect to server' , "Connection Error " );
+				   
+			 }
+			 
+            var errors = jqXhr.responseJSON.error;
+            var errorsHtml= '';
+            $.each( errors, function( key, value ) {
+                errorsHtml += '<li>' + value + '</li>'; 
+            });
+			
+            toastr.error( errorsHtml , "Validation Error " );
+			 
+        }
+    })
+    .done(function(response)
+    {
+        //
+		
+		
+		
+    })
+    .fail(function( jqXHR, json ) 
+    {
+      
+    });
+    return false;
+
+ })
+ 
+ 
+  $(".affliateSecondFormGroup").on("submit", function(){
 	event.preventDefault();
    var form= $(this);
 	 // var $btn = (this).closest('#submit').button('loading')
