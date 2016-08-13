@@ -166,16 +166,15 @@
             <h3 class="text-left">Affiliate Management</h3>
             <form role="form" method="post" action="{{ url('invitation/send_invitation') }}" id="invite_form" class="form-horizontal invite_form">
               <div class="form-group">
-                <label for="usr">To invite someone to your sales funnel, enter their email address bellow</label>
-                <input type="email" name="email" required style="display:inline-block" class="form-control"  placeholder="Ex : user@email.com"> 
-                <input type="submit" id="submit" style="    font-size: 18px" class="btn-xs btn btn-success" value="Send Invitation">
+                <label for="usr">To invite someone to your sales funnel</label>
+                <input type="email" name="email" required style="display:inline-block" class="form-control"   value="{{ url('?referrer_id='.Auth::user()->username) }}"> 
+               
               </div>
               </form>
                <form role="form" method="post" action="{{ url('invitation/send_affiliate') }}" id="affiliate_form" class="form-horizontal invite_form">
               <div class="form-group affliateSecondFormGroup">
-                <label for="usr">To register a new affiliate, enter their email address bellow</label>
-                  <input type="email" name="email"  placeholder="Ex : user@email.com" style="display:inline-block" class="form-control" value=""> 
-                 <input type="submit" id="submit" style="    font-size: 18px" class="btn-xs btn btn-success" value="Send Affiliate">
+                <label for="usr">To register a new affiliate</label>
+                  <input type="email" name="email" style="display:inline-block" class="form-control" value="{{ url('register/'.Auth::user()->username) }}"> 
               </div>
             </form>
             <script type="text/javascript">

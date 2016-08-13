@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
+Route::get('/', 'HomeController@homepage');
 
 
 //secure routes
@@ -59,6 +57,7 @@ Route::get('interest/cancel', 'InterestController@cancel_invitation');
 
 Route::post('user/login', 'UserController@login');
 Route::get('video', 'InviteController@video');
+Route::post('referrer_id_validate', 'InviteController@is_user_exists');
 Route::post('can-watch', 'InviteController@video_validate');
 
 //products

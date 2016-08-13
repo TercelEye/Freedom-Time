@@ -72,7 +72,7 @@ class InviteController extends Controller
 		$data['from'] = $user;
 		$data['to_email'] =$request->email;
 		Mail::send('emails.invitation', $data, function ($message) use ($request) {
-			$message->from('noreply@freedomtimeandwealth.com', 'Freedom Time');
+			
 			$message->subject('You Got Invitaion From Freedom Time');
 			$message->to($request->email);
 		});
@@ -102,7 +102,7 @@ class InviteController extends Controller
 		$data['user'] = $user;
 		$data['to_email'] =$request->email;
 		Mail::send('emails.affiliate', $data, function ($message) use ($request) {
-			$message->from('noreply@freedomtimeandwealth.com', 'Freedom Time');
+			
 			$message->to($request->email);
 			$message->subject('Become a Business Partner');
 			
@@ -133,7 +133,30 @@ class InviteController extends Controller
 
 		
 	}
-	
+	public function is_user_exists(Request $request){
+		$data['false']=true;
+		 $validator =   Validator::make($request->all(), [
+			 'referrer_id' => 'required',
+		 ]);
+		 //check user exists
+		  $user_exists = \App\User::where('username', \Request::input('referrer_id') )
+						->first();
+		 $validator->after(function  ($validator) use ($user_exists){
+			if($user_exists == false)
+				$validator->errors()->add('referrer_id', 'Referrer ID is incorrect. Please enter correct ID' );
+		 });
+		if ($validator->fails()) {
+			//validation error
+			$data['error'] = $validator->errors()->all();
+  			return \Response::json($data, 422 ); // Status code here
+		}else {
+			//store sesstion
+			session(['referrer_id' =>  $user_exists->username]);
+			$data['message'] = 'Referrer ID verification complete you are redirecting';
+			$data['status']=true;
+		}
+		return \Response::json($data, 200 ); // Status code here
+	}
 	
 	 public function video_validate(Request $request){
 		$data['false']=true;
@@ -144,13 +167,13 @@ class InviteController extends Controller
 			 'phone' => 'required|digits:10',
 			 'first_name' => 'required_with:last_name', 
 		 ]);
-		 $invitation = \App\Invitation::where('email', \Request::input('email') )
-						->where('secret_pascode',\Request::input('secret'))
+		 $referre = session('referrer_id');
+		 $referre_user = \App\User::where('username', $referre )
 						->first();
 						
-		 $validator->after(function  ($validator) use ($invitation){
-			if($invitation == false)
-				$validator->errors()->add('secret', 'Invalid secret passcode' );
+		 $validator->after(function  ($validator) use ($referre_user){
+			if($referre_user == false)
+				$validator->errors()->add('reffer', 'Referrer ID is incorrect' );
 		 });
 
 		
@@ -159,20 +182,27 @@ class InviteController extends Controller
 			$data['error'] = $validator->errors()->all();
   			return \Response::json($data, 422 ); // Status code here
 		}else {
-			//all goods
-			
-			$invite = \App\Invitation::find($invitation->id);
-			$invite->name = $request->name;
-			$invite->tel = $request->phone;
-			$invite->save();
+			 $invitation = \App\Invitation::where('email',$request->email)
+			 			->where('user_id',$referre_user->id)
+						->first();
+			if($invitation ==false){
+				//all good insert
+				$invitation = new \App\Invitation;
+				$invitation->name = $request->name;
+				$invitation->tel = $request->phone;
+				$invitation->email = $request->email;
+				$invitation->user_id = $referre_user->id;
+				$invitation->save();
+			}else {
+				//update
+				$invitation->name = $request->name;
+				$invitation->tel = $request->phone;
+				$invitation->save();
+			}
 
 			$data['message'] = 'verification complete you are redirecting';
 			$data['status']=true;
-			if($invitation->is_affiliate == 0){
-				$data['url']=url('video?invitation='. \Crypt::encrypt($invitation->id));
-			}else {
-				$data['url']=url('register?invitation='. \Crypt::encrypt($invitation->id));
-			}
+			$data['url']=url('video?invitation='. \Crypt::encrypt($invitation->id));
 		}
 		return \Response::json($data, 200 ); // Status code here
 	}

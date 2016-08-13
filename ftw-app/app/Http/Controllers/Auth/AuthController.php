@@ -48,6 +48,7 @@ class AuthController extends Controller
      */
     protected function validator(array $data)
     {
+		$reserved_username = ['admin','user'];
 		$messages = [
 			'lname.required'    => 'The Last name field is required.',
 			'lname.min'    => 'The Last name must be at least 4 characters.',

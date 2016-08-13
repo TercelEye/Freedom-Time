@@ -4,6 +4,13 @@
 
 @section('content') 
 
+<style type="text/css">
+
+.main #maincontent .row .rightContent p span {
+    cursor: text !important;
+}
+	</style>
+
 <section class="main">
   <div class="page" id="maincontent">
     <div class="content container">
@@ -56,7 +63,7 @@
               <hr>
               <p class="secondP">Let’s show you another way to increase the options available to you. </p>
               <p class="thirdP">Take a moment and click on the link below. </p>
-              <a href="#">No previous experience required!</a> </div>
+              <a href="#" style=" cursor: text">No previous experience required!</a> </div>
             <!-- wrapper --> 
           </div>
           <!-- rightContent --> 
@@ -90,16 +97,22 @@
 <!-- FOOTER START -->
 <footer class="page" id="footer">
   <div class="content container-fluid">
-    <div class="row"> <a href="#" data-toggle="modal" data-target="#modalWatchTheVideo" class="btn btn-info">Watch The Video</a> 	
-    @if(Request::input('code') !="")
-     <script type="text/javascript">
+    <div class="row">
+    
+   
+    @if(Request::input('referrer_id') !="")
+      <a href="#" data-toggle="modal" data-target="#modalWatchTheVideo" class="btn btn-info">Watch The Video</a> 	
+   <?php /*?>  <script type="text/javascript">
 	 $(document).ready(function(e) {
         $("#modalWatchTheVideo").modal('show');
     });
     
-     </script>	
+     </script><?php */?>
+    @else 
+     	      <a href="#" data-toggle="modal" data-target="#modalReferrerID" class="btn btn-info">Watch The Video</a> 	
+
     @endif
-      <!-- Modal -->
+      <!-- watch vide details form -->
       <div class="modal fade" id="modalWatchTheVideo" role="dialog">
         <div class="modal-dialog"> 
           <!-- Modal content-->
@@ -110,6 +123,7 @@
               <button type="button" class="close" id="triangle-topright" data-dismiss="modal"><span>&times;</span></button>
               <h2 class="modal-title text-center"></h2>
             </div>
+            
             <!-- modal-header -->
             <div class="modal-body">
               <div class="row">
@@ -128,10 +142,7 @@
                       <label for="pwd">Phone:</label>
                       <input type="text" name="phone"  class="form-control" id="phone">
                     </div>
-                    <div class="form-group">
-                      <label for="pwd">Passcode:</label>
-                      <input type="text" {{ (Request::input('code')!=""? 'readonly' : '') }}  name="secret" autocomplete="off" value="{{ Request::input('code') }}"  class="form-control" id="spass">
-                    </div>
+                   
                     <a id="watch_video_submit" class="btn btn-info"><!-- <button class="btn btn-info">Submit</button> -->Submit</a>
                   </form>
                 </div>
@@ -147,7 +158,51 @@
         </div>
         <!-- modal-dialog --> 
       </div>
-      <!-- modal fade --> 
+      <!-- end watch vide details form  --> 
+      
+       <!-- userid form -->
+      <div class="modal fade" id="modalReferrerID" role="dialog">
+        <div class="modal-dialog"> 
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header"> 
+                          <button type="button" class="close" id="triangle-topright" data-dismiss="modal"><span>&times;</span></button>
+
+            <a href="#">
+              <h3 class="text-uppercase">Please let us know who referred you
+</h3>
+              </a>
+              <h2 class="modal-title text-center"></h2>
+            </div>
+            
+            <!-- modal-header -->
+            <div class="modal-body">
+              <div class="row">
+                <div class="bodyContents" style="padding:25px;">
+                  <form role="form" action="{{ url('referrer_id_validate') }}" method="post" id="wsatch_video">
+                  	<div class="ajax_error"></div>
+                  
+                    <div class="form-group">
+                      <label for="pwd">Enter the ID of the person who referred you:</label>
+                      <input type="text" {{ (Request::input('referrer_id')!=""? 'readonly' : '') }}  name="referrer_id" autocomplete="off" value="{{ Request::input('referrer_id') }}"  class="form-control" id="spass">
+                    </div>
+                    <a id="referrer_id_validate" style="font-size: 17px;padding: 7px;height: 43px; width: 100%;" class="btn btn-sm btn-info"><!-- <button class="btn btn-info">Submit</button> -->Submit</a>
+                  </form>
+                </div>
+                <!-- bodyContents --> 
+              </div>
+            </div>
+            <!-- modal-body -->
+            <div class="modal-footer"></div>
+            <!-- modal-footer --> 
+          </div>
+          <!-- modal-content --> 
+          
+        </div>
+        <!-- modal-dialog --> 
+      </div>
+      <!-- end watch vide details form  --> 
+      
     </div>
     
     <script type="text/javascript">
@@ -170,6 +225,68 @@
 			 $btn.button('reset')
             toastr.success( json.message , "" );
 			window.location.replace(json.url);
+			
+        },
+        error   : function ( jqXhr, json, errorThrown ) 
+        {
+			$btn.button('reset')
+			 if(jqXhr.status  ==0) {
+				  toastr.error( 'could not connect to server' , "Connection Error " );
+				   
+			 }
+			 
+            var errors = jqXhr.responseJSON.error;
+            var errorsHtml= '';
+            $.each( errors, function( key, value ) {
+                errorsHtml += '<li>' + value + '</li>'; 
+            });
+			
+            toastr.error( errorsHtml , "Validation Error " );
+			 
+        }
+    })
+    .done(function(response)
+    {
+        //
+		
+		
+		
+    })
+    .fail(function( jqXHR, json ) 
+    {
+      
+    });
+    return false;
+		
+		
+		
+		
+		
+    });
+	
+	  $("#referrer_id_validate").click(function(e) {
+		
+		  var $btn = $(this).button('loading')
+		  
+        var form_data = $(this).closest('form').serialize();
+		
+		
+		var form = $(this).closest('form');
+
+    $.ajax({
+        url     : form.attr("action"),
+        type    : form.attr("method"),
+        data    : form.serialize(),
+        dataType: "json",
+        success : function ( json ) 
+        {
+			$btn.button('reset')
+			if(json.status == true) {
+				$("#modalWatchTheVideo").modal('show');	 
+				$("#modalReferrerID").modal('hide');	 
+			}
+            //toastr.success( json.message , "" );
+			//window.location.replace(json.url);
 			
         },
         error   : function ( jqXhr, json, errorThrown ) 

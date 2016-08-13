@@ -38,7 +38,12 @@
                             <label for="pwd">Password:</label>
                             <input type="password" name="password" class="form-control" id="pwd">
                           </div>
-                          <a  onClick="login(this)" class="btn btn-info"><!-- <button class="btn btn-info">Submit</button> -->Login</a>
+                          
+                        <div class="form-group">   
+                    <a  href="{{ url('/password/reset') }}" style="color:#868686;font-size:12px; padding:0px;">Forgot Your Password?</a>
+                    </div>
+                        <a  onClick="login(this)" style="    width: 100%; margin:0;" class="btn btn-info"><!-- <button class="btn btn-info">Submit</button> -->Login</a>
+                       
                         </form>
                         
                         <script type="text/javascript">

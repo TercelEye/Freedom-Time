@@ -19,7 +19,7 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <script src="<?=url('assets/js/jquery.min.js')?>"></script> 
-
+<script src="<?=url('assets/js/bootstrap.js')?>"></script>
 <link rel="stylesheet" type="text/css" href="<?=url('lib/toastr-master/build/toastr.css')?>">
 <script src="<?=url('lib/toastr-master/build/toastr.min.js')?>"></script>
 <script type="text/javascript">
@@ -29,6 +29,7 @@ $.ajaxSetup({
         }
 });
 </script>
+
 </head>
 <body>
 
@@ -73,7 +74,10 @@ $.ajaxSetup({
                             <label for="pwd">Password:</label>
                             <input type="password" name="password" class="form-control" id="pwd">
                           </div>
-                          <a  onClick="login(this)" class="btn btn-info"><!-- <button class="btn btn-info">Submit</button> -->Login</a>
+                        <div class="form-group">   
+                    <a  href="{{ url('/password/reset') }}" style="color:#868686;font-size:12px; padding:0px;">Forgot Your Password?</a>
+                    </div>
+                        <a  onClick="login(this)" style="    width: 100%; margin:0;" class="btn btn-info"><!-- <button class="btn btn-info">Submit</button> -->Login</a>
                         </form>
                         
                         <script type="text/javascript">
@@ -107,7 +111,7 @@ $.ajaxSetup({
             <!-- modal fade --> 
             
           </li>
-          <li> <a href="#">Sign Up</a> </li>
+         
         </ul>
         <!-- navbar-right --> 
         
@@ -127,8 +131,8 @@ $.ajaxSetup({
          @if(Auth::user()->is_admin == 1)
          <li>  <a href="{{ url('admin') }}">Dashboard</a> </li>
          @endif
-          <li > <a style="padding-left:0;" href="{{ url('dashboard') }}">{{ Auth::user()->username }} </a> </li>
-          <li> <a style="padding-left:0;" href="{{ url('logout') }}">Logout</a> </li>
+<?php /*?>          <li > <a style="padding-left:0;" href="{{ url('dashboard') }}">{{ Auth::user()->username }} </a> </li>
+<?php */?>          <li> <a style="padding-left:0;" href="{{ url('logout') }}">Logout</a> </li>
         </ul>
         <!-- navbar-right --> 
         
@@ -158,7 +162,7 @@ $.ajaxSetup({
 <!-- Javascript --> 
 
 
-<script src="<?=url('assets/js/bootstrap.js')?>"></script> 
+ 
 <script src="<?=url('assets/js/myscript.js')?>"></script>
 </body>
 </html>

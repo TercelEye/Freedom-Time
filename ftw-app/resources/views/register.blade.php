@@ -3,7 +3,10 @@
 @section('title','FREEDOM || Register')
 @section('content') 
 
-
+<style type="text/css">
+small {
+	color:#de2020;}
+</style>
 <section class="main" id="register">
 	<div class="content container">
 		<div class="row">
@@ -11,7 +14,26 @@
 				<div class="formWrapper">
 					<a href="#"><h3 class="text-uppercase">Create An Account</h3></a>
 					 <form class="form-horizontal" role="form" method="POST" action="{{ url('/register/'.$username) }}">
-                        {{ csrf_field() }}
+                     
+                     
+                     <div class="row">
+                       <div class="col-md-12">
+<?php /*?>                     <div class="input-group form-group" >
+    <input type="text" class="form-control" name="security" id="security">
+        <span class="input-group-addon">
+            <a class='app_tooltip' data-toggle="tooltip" data-placement="left" title="Password must be at least 6 character ">
+                <!-- The class CANNOT be tooltip... -->
+                <i class='glyphicon glyphicon-info-sign'></i>
+            </a>
+        </span>
+    </input>
+</div>
+
+<script type="text/javascript">
+$(".app_tooltip").tooltip();
+</script><?php */?>
+         
+             {{ csrf_field() }}
                         <input type="hidden" name="invited_by" value="{{ $invited_by }}">
 						<div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
 							<label for="usr">Username: <sup>*</sup></label>
@@ -52,7 +74,7 @@
 						</div>
 						<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 							<label for="pwd">Password: <sup>*</sup></label>
-							  <input id="password" type="password" class="form-control" name="password">
+							  <input id="password" type="password" autocomplete="off" placeholder="Password must be at least 6 character" value="" class="form-control" name="password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -62,7 +84,7 @@
 						</div>
                        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
 							<label for="pwd">Confirm Password: <sup>*</sup></label>
-							  <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
+							  <input id="password-confirm" type="password" placeholder="Password must be at least 6 character" class="form-control" name="password_confirmation">
 
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
@@ -71,6 +93,8 @@
                                 @endif
 						</div>
                         
+                        </div><!-- end col -->
+                       </div><!-- end row -->
                        
                          <button class="btn btn-info">  Register Now</button> 
 					<?php /*?>	<a href="#" class="btn btn-info" id="registerLink">
@@ -82,9 +106,6 @@
 	</div>
 </section>
 
-
-
-
-
-
 @endsection 
+
+  
