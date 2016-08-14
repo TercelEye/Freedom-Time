@@ -71,14 +71,15 @@ class InterestController extends Controller
 	public function store_form(Request $request){
 		$invitation_id = \Crypt::decrypt($request->invitation);
 		$validator = Validator::make($request->all(), [
-          'first_name' => 'required|min:5',
-			'last_name' => 'required|min:5',
+          'first_name' => 'required|min:3',
+		  'last_name' => 'required|min:3',
+		  'age_verify' => 'required',
         ]);
 		
-		 $validator->after(function  ($validator) use ($request){
+		 /*$validator->after(function  ($validator) use ($request){
 			if(count($request->all()) < 26)
 				$validator->errors()->add('all_fields', 'Please check if you\'ve filled all the fields with valid information and try again. Thank you.'.count($request->all()));
-		 });
+		 });*/
 		 
 
         if ($validator->fails()) {

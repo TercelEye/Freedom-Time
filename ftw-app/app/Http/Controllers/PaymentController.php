@@ -9,8 +9,13 @@ use App\Payment;
 
 
 class PaymentController extends Controller {
-	 
-	//credit card form
+   
+   public function billing_address(){
+	    $user = \Auth::user();
+	   	return view('payment/billing_address',compact('user'));
+	}
+   
+   //credit card form
    public function paynow(Request $request){
    	   $errors = array();
 	    $auth_user = \Auth::user();
