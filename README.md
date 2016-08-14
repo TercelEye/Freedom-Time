@@ -6,9 +6,9 @@ Freedom, Time &amp; Wealth
 - expire monthe/year (12/17) format in payment page
 - forget password login -- 
 - remove top username. and cant go to homepage --
-- biling address for after registration
-- auto popup no need,invitation link clicked
-- validation error romove form video
+- biling address for after registration --
+- auto popup no need,invitation link clicked --
+- validation error romove form video --
  - required fild form
  - fame,
  - lastname
