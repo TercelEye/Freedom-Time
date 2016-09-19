@@ -18,3 +18,8 @@ Freedom, Time &amp; Wealth
 	- https://www.myvollara.com/Site/FreshAirSurround
 - remove password do as 
 	- http://switchtofreedom.com/paulsvetz --
+
+#2016 Sep 19 changes
+-sb pro the withdraw button is still showing 
+- Ryan: We will need to remove that because it is done manually now by the client
+- Ryan: Also change the tab name from Fund Withdrawal to 'Your Earnings'
