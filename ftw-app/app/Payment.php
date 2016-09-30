@@ -5,7 +5,7 @@ namespace App;
 use Auth;
 use Illuminate\Http\Request;
 use App\User;
-use App\Fund;
+use App\Fund; 
 use App\Invoice;
 use net\authorize\api\contract\v1 as AnetAPI;
 use net\authorize\api\controller as AnetController;
@@ -148,7 +148,7 @@ class Payment  {
 	  $billto->setLastName($user->lname);
 	  //$billto->setCompany("Souveniropolis");
 	  $billto->setAddress($user->address);
-	  $billto->setCity($user->city);
+	  $billto->setCity($user->city); 
 	  //$billto->setState("TX");
 	  $billto->setZip($user->zip_code);
 	  $billto->setCountry("USA");
@@ -394,5 +394,22 @@ class Payment  {
     return false;
   }
 	
-	
+	/*
+	Send Payment Status Email
+	*/
+	public function payment_notification($invoice,$status = false){
+		if($status==true){
+			//send payment complete email
+			$data['invoice'] = $invoice;
+			Mail::send('emails.invoice_paid', $data, function ($message) use ($invoice) {
+				$message->to($invoice->customer()->email);
+				$message->subject('Become a Business Partner');
+
+			});
+		}else {
+			//payment desline
+			
+		}
+	}
+		
 }

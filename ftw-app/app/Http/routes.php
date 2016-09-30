@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth','web']], function () {
 	Route::post('user/edit_password', 'UserController@edit_password');
 	
 	//payment 
+	Route::get('user/billing-address', 'PaymentController@billing_address');
 	Route::get('user/billing', 'PaymentController@paynow');
 	Route::post('user/billing', 'PaymentController@paynow_process');
 	Route::get('payment', 'PaymentController@chargeCreditCard');

@@ -102,7 +102,6 @@ class InviteController extends Controller
 		$data['user'] = $user;
 		$data['to_email'] =$request->email;
 		Mail::send('emails.affiliate', $data, function ($message) use ($request) {
-			
 			$message->to($request->email);
 			$message->subject('Become a Business Partner');
 			

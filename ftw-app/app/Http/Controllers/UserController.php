@@ -44,7 +44,7 @@ class UserController extends Controller
 					->where('payment_status','Paid')
 					->first();
 		if($found_invoice==false && Auth::user()->is_admin != 1){
-			return redirect('user/billing');	
+			return redirect('user/billing-address');	
 		}
 		$fund = \App\Fund::where('user_id',$user->id)->first();
 		$invoices = \App\Invoice::where('user_id',$user->id)->get();
@@ -103,16 +103,13 @@ class UserController extends Controller
 	}
 	public function edit_address(Request $request){
 		
-		$messages = [
-			'land_phone.required'    => 'The Phone field is required.',
-			'land_phone.digits'    => 'The Phone must be 10 digits.',
-		];
+		
 		
 		$validator =   Validator::make($request->all(), [
 			 'address' =>'required|min:4',
 			 'city' => 'required|min:4',
-			 'land_phone' => 'required|digits:10',
-		 ],$messages);
+			 'zip_code' => 'required|min:3',
+		 ]);
 		 
 		 
 		 $auth_user = \Auth::user();
