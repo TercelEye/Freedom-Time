@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="admin-themes-lab">
     <meta name="author" content="themes-lab">
-    <link rel="shortcut icon" href="<?=asset('assets/admin')?>/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="{{asset('assets/admin')}}/images/favicon.png" type="image/png">
     <title>Administrator</title>
-    <link href="<?=asset('assets/admin')?>/css/style.css" rel="stylesheet">
-    <link href="<?=asset('assets/admin')?>/css/theme.css" rel="stylesheet">
-    <link href="<?=asset('assets/admin')?>/css/ui.css" rel="stylesheet">
-    <link href="<?=asset('assets/admin/layout')?>/css/layout.css" rel="stylesheet">
+    <link href="{{asset('assets/admin')}}/css/style.css" rel="stylesheet">
+    <link href="{{asset('assets/admin')}}/css/theme.css" rel="stylesheet">
+    <link href="<{{asset('assets/admin')}}/css/ui.css" rel="stylesheet">
+    <link href="{{asset('assets/admin/layout')}}/css/layout.css" rel="stylesheet">
     <!-- BEGIN PAGE STYLE -->
-    <link href="<?=asset('assets/admin')?>/plugins/metrojs/metrojs.min.css" rel="stylesheet">
-    <link href="<?=asset('assets/admin')?>/plugins/maps-amcharts/ammap/ammap.min.css" rel="stylesheet">
+    <link href="{{asset('assets/admin')}}/plugins/metrojs/metrojs.min.css" rel="stylesheet">
+    <link href="{{asset('assets/admin')}}/plugins/maps-amcharts/ammap/ammap.min.css" rel="stylesheet">
     <!-- END PAGE STYLE -->
-    <script src="<?=asset('assets/admin')?>/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="{{asset('assets/admin')}}/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <!-- LAYOUT: Apply "submenu-hover" class to body element to have sidebar submenu show on mouse hover -->
   <!-- LAYOUT: Apply "sidebar-collapsed" class to body element to have collapsed sidebar -->
@@ -79,6 +79,12 @@
           
            <li {!! Request::is('admin/affiliates') ? 'class="nav-active active"' : '' !!}>
               <a href="{{ url('admin/affiliates') }}"><i class="icon-user"></i><span>Affiliates</span></a>
+             
+            </li>
+
+
+           <li {!! Request::is('admin/wthdraw') ? 'class="nav-active active"' : '' !!}>
+              <a href="{{ url('admin/wthdraw') }}"><i class="icon-user"></i><span>Wthdraw</span></a>
              
             </li>
          

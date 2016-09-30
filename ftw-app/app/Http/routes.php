@@ -40,6 +40,9 @@ Route::group(['middleware' => ['auth','web','admin']], function () {
 	Route::get('admin', 'admin\AdminDashboard@index');
 	Route::get('admin/login', 'admin\AdminDashboard@index');
 	Route::get('admin/affiliates', 'admin\AffiliatesController@all');
+
+	//wthdraw
+	Route::get('admin/wthdraw', 'admin\WithdrawController@index');
 	
 	Route::get('admin/training', 'admin\TrainingController@index');
 	Route::post('admin/training', 'admin\TrainingController@store_training');
