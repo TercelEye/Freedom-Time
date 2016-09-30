@@ -214,7 +214,6 @@ class Payment  {
 	  }
 	  return $response;
   }
-   /*** charge from invoice ***/
    public function charge_from_invoice($invoice_id){
 	   $invoice = \App\Invoice::find($invoice_id);
 	   $customer = $invoice->customer;

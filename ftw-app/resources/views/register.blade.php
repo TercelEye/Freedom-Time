@@ -22,7 +22,7 @@ small {
     <input type="text" class="form-control" name="security" id="security">
         <span class="input-group-addon">
             <a class='app_tooltip' data-toggle="tooltip" data-placement="left" title="Password must be at least 6 character ">
-                <!-- The class CANNOT be tooltip... -->
+             
                 <i class='glyphicon glyphicon-info-sign'></i>
             </a>
         </span>
