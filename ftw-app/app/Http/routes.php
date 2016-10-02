@@ -36,13 +36,18 @@ Route::group(['middleware' => ['auth','web']], function () {
 
 });
 	
-Route::group(['middleware' => ['auth','web','admin']], function () {	
+Route::group(['middlewareGroups' => ['auth','web','admin']], function () {	
 	Route::get('admin', 'admin\AdminDashboard@index');
 	Route::get('admin/login', 'admin\AdminDashboard@index');
 	Route::get('admin/affiliates', 'admin\AffiliatesController@all');
 
 	//wthdraw
 	Route::get('admin/wthdraw', 'admin\WithdrawController@index');
+	Route::get('admin/wthdraw/create', 'admin\WithdrawController@create');
+	Route::post('admin/wthdraw/create', 'admin\WithdrawController@store');
+	Route::get('admin/wthdraw/edit/{wthdraw}', 'admin\WithdrawController@edit');
+	Route::post('admin/wthdraw/edit/{wthdraw}', 'admin\WithdrawController@edit');
+	Route::post('admin/wthdraw/delete', 'admin\WithdrawController@destroy');
 	
 	Route::get('admin/training', 'admin\TrainingController@index');
 	Route::post('admin/training', 'admin\TrainingController@store_training');

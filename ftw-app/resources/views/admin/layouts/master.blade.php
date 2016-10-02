@@ -16,6 +16,12 @@
     <link href="{{asset('assets/admin')}}/plugins/maps-amcharts/ammap/ammap.min.css" rel="stylesheet">
     <!-- END PAGE STYLE -->
     <script src="{{asset('assets/admin')}}/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <style type="text/css">
+      .alert ul {
+            padding-left: 10px !important;
+      }
+    </style>
   </head>
   <!-- LAYOUT: Apply "submenu-hover" class to body element to have sidebar submenu show on mouse hover -->
   <!-- LAYOUT: Apply "sidebar-collapsed" class to body element to have collapsed sidebar -->
@@ -84,7 +90,7 @@
 
 
            <li {!! Request::is('admin/wthdraw') ? 'class="nav-active active"' : '' !!}>
-              <a href="{{ url('admin/wthdraw') }}"><i class="icon-user"></i><span>Wthdraw</span></a>
+              <a href="{{ url('admin/wthdraw') }}"><i class="icon-user"></i><span>Wthdrawal History</span></a>
              
             </li>
          

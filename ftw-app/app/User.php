@@ -22,7 +22,7 @@ class User extends Authenticatable
     }
 	
 	public function fund(){
-		return $this->belongsTo('\App\Fund','id','id');
+		return $this->belongsTo('\App\Fund','id','user_id');
 	}
 	
     /**

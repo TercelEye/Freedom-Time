@@ -14,6 +14,6 @@ class Affiliates extends Model
 		//return $this->belongsTo('\App\User','user_id','id');	
 	}
 	 public function fund(){
-		return $this->belongsTo('\App\Fund','id','user_id');
+		return $this->belongsTo('\App\Fund','user_id','user_id');
 	}
 }

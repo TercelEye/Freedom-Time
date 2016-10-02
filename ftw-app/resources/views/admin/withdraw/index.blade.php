@@ -3,49 +3,41 @@
 @section('content')
 
 <div class="row">
-<div class="col-md-5">
+
+<div class="col-md-12">
 
 <div class="panel">
-	<div class="panel-content">
-    	<form method="post">
-	<div class="form-group">
-    	<label>Title</label>
-    	<input type="text" class="form-control form-white" value="{{ $obj->title or '' }}" name="title">
-    </div>
-    <div class="form-group">
-    	<label>Text</label>
-    	<textarea name="text" class="form-control form-white" rows="5">{{ $obj->text or '' }}</textarea>
-    </div>
-	{{ csrf_field() }}
-    <input type="hidden" name="id" value="{{ Request::input('id') }}">
-    <input type="submit" class="btn btn-success"> 
-     <a href="{{ url('admin/training/category') }}" class="btn btn-danger"> Close </a>
-</form>
-    </div>
+<div class="panel-heading">
+    <h2>Money Wthdrawal</h2>
 </div>
-
-</div><!-- end col -->
-<div class="col-md-7">
-
-<div class="panel">
 	<div class="panel-content">
 
 <table class="table table-bordered table-striped">
 <thead>
 	<tr> 
-    	<th>ID</th> 
-        <th>Title</th> 
-        <th>Text</th> 
+        <th>ID</th> 
+    	<th>User</th> 
+        <th>Amount</th> 
+        <th>Note</th> 
+           <th></th> 
            <th></th> 
      </tr>
     </thead>
     <tbody>
-    	@foreach($category as $row)
+    	@foreach($withdraws as $row)
         	<tr>
             	<td>{{ $row->id }}</td>
-                <td>{{ $row->title }}</td>
-                <td>{{ $row->text }}</td>
-                <td> <a href="{{ url('admin/training/category?id='.$row->id) }}">Edit</a></td>
+                <td>{{ $row->amount }}</td>
+                <td>{{ $row->amount }}</td>
+                <td>{{ $row->note }}</td>
+                <td> <a href="{{ url('admin/wthdraw/edit/'.$row->id) }}">view</a></td>
+                <td> 
+                <form action="{{url('admin/wthdraw/delete')}}" method="post">
+                    <input type="hidden" name="id" value="{{$row->id}}">
+                    {{ csrf_field() }}
+                    <input type="submit" name="delete" class="btn btn-sm btn-danger" value="delete">
+                </form>
+              </td>
             </tr>
         @endforeach
     </tbody>
