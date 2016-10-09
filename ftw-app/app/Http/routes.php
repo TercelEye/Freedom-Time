@@ -36,7 +36,7 @@ Route::group(['middleware' => ['auth','web']], function () {
 
 });
 	
-Route::group(['middlewareGroups' => ['auth','web','admin']], function () {	
+Route::group(['middleware'=>'auth','middlewareGroups' => ['auth','web','admin']], function () {	
 	Route::get('admin', 'admin\AdminDashboard@index');
 	Route::get('admin/login', 'admin\AdminDashboard@index');
 	Route::get('admin/affiliates', 'admin\AffiliatesController@all');

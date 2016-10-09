@@ -12,6 +12,7 @@
         <th>Name</th> 
         <th>Email</th> 
         <th>Paypal Email</th> 
+        <th>Affiliates</th> 
         
         <th>Funds</th> 
         <th></th> 
@@ -27,6 +28,7 @@
                 <td>{{ $row->fname }} {{ $row->lname }}</td>
                 <td>{{ $row->email }}</td>
                 <td>{{ $row->paypal_email }}</td>
+                <td>{{ $row->affiliate->sub_affiliates or '-' }}</td>
                 
                 
                 <td>$ {{ $row->fund->balance or '0' }}</td>

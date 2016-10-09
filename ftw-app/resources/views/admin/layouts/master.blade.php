@@ -79,7 +79,7 @@
       
           </div>
           <ul class="nav nav-sidebar">
-         <?php /*?>   <li  {!! Request::is('admin') ? 'class="nav-active active"' : '' !!}><a  href="{{ url('admin') }}"><i class="icon-home"></i><span>Dashboard</span></a></li><?php */?>
+          <li  {!! Request::is('admin') ? 'class="nav-active active"' : '' !!}><a  href="{{ url('admin') }}"><i class="icon-home"></i><span>Dashboard</span></a></li>
          
           
           
