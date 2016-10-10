@@ -13,8 +13,11 @@ use net\authorize\api\controller as AnetController;
 
  define("AUTHORIZENET_LOG_FILE", "phplog");
 class Payment  {
-	private $_MERCHANT_LOGIN_ID = "279TGXzQfQ7Z";
-	private $_MERCHANT_TRANSACTION_KEY = "94KWnpKgsQY3889Y";
+	// //sandbox
+	// private $_MERCHANT_LOGIN_ID = "279TGXzQfQ7Z";
+	// private $_MERCHANT_TRANSACTION_KEY = "94KWnpKgsQY3889Y";
+	private $_MERCHANT_LOGIN_ID = "5GRfb9zx8ue";
+	private $_MERCHANT_TRANSACTION_KEY = "4HEs4hL4894nyHV7";
 	
 	private $_fee =39;
 	private $_interval =30; // days

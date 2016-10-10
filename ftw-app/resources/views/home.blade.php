@@ -17,7 +17,8 @@
       <h2 class="text-center" id="topHeading">Different people, different needs</h2>
       <div class="row">
         <div class="singleContent one">
-          <div class="leftImage col-xs-12 col-sm-6"> <img src="<?=url('assets/images/contentImage-1.jpg')?>" alt="Mom or Dad with family"> </div>
+          <div class="leftImage col-xs-12 col-sm-6"> 
+          <img src="{{url('assets/images/contentImage-1.jpg')}}" alt="Mom or Dad with family"> </div>
           <!-- leftImage -->
           <div class="rightContent col-xs-12 col-sm-6">
             <div class="wrapper">
@@ -35,7 +36,7 @@
         
         <div class="singleContent two">
           <div class="leftImage col-xs-12 col-sm-6">
-            <div class="imgWrapper"> <img src="<?=url('assets/images/contentImage-2.jpg')?>" alt="Career Professionals"> </div>
+            <div class="imgWrapper"> <img src="{{url('assets/images/contentImage-2.jpg')}}" alt="Career Professionals"> </div>
             <!-- imgWrapper --> 
           </div>
           <!-- leftImage -->
@@ -128,7 +129,7 @@
             <div class="modal-body">
               <div class="row">
                 <div class="bodyContents">
-                  <form role="form" action="{{ url('can-watch') }}" method="post" id="watch_video">
+                  <form role="form" onsubmit="return false;" action="{{ url('can-watch') }}" method="post" id="watch_video">
                   	<div class="ajax_error"></div>
                     <div class="form-group">
                       <label for="usr">Name:</label>
