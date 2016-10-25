@@ -53,7 +53,7 @@ function edit_address(e){
 			$btn.button('reset')
 			toastr.success( json.message , "" );
 			if(json.status == true){
-				window.location.replace("<?=url('user/billing')?>");
+				window.location.replace("{{url('user/billing')}}");
 			}
            
 			
@@ -73,7 +73,7 @@ function edit_address(e){
             });
 			
             toastr.error( errorsHtml , "Validation Error " );
-			 
+			     
         }
     })
     .done(function(response) {$btn.button('reset')})

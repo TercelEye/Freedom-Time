@@ -12,6 +12,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
 	
+
 	public function msg($msg="",$type = 'danger'){
 		$html = '<div class="alert alert-'.$type.'">'.$msg.'<div>';
 		return $html;

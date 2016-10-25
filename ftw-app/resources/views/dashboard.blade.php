@@ -89,7 +89,7 @@
             <li class="active"><a href="#">Contact Info</a></li>
             <li><a href="#">Change Password</a></li>
             <li><a href="#">Affiliates</a></li>
-            <li><a href="#">Fund withdrawal</a></li>
+            <li><a href="#">Your Earnings</a></li>
             <li><a href="#">Billing</a></li>
           </ul>
         </div>
@@ -295,7 +295,7 @@
           <!-- affiliates -->
           
           <div id="changepaypalemail">
-            <h3 class="text-left">Fund withdrawal</h3>
+            <h3 class="text-left">Your Earnings</h3>
             <div class="pull-right">
             	<small>available balance</small>
             	<h2>${{ $fund->balance or 0 }}</h2>
@@ -305,10 +305,34 @@
                 <label for="pwd">Enter your new paypal email address:</label>
                 <input type="email" name="paypal_email" value="{{ $user->paypal_email }}" class="form-control" id="paypalemailchange">
               </div>
-              <a onClick="edit_paypalemail(this)" class="btn btn-info"><!-- <button class="btn btn-info">Submit</button> -->Withdraw</a>
+              <a onClick="edit_paypalemail(this)" class="btn btn-info"><!-- <button class="btn btn-info">Submit</button> -->save</a>
               
             </form>
             
+            <h2>Withdrawal History</h2><br>
+            <table class="table table-bordered table-striped">
+              <tr>
+                <td>#</td>
+                <td>Amount</td>
+                <td>Note</td>
+                <td>Date</td>
+              </tr>
+              @if(count($withdraws)>0)
+                    @foreach($withdraws as $row)
+                    <tr>
+                      <td>#</td>
+                      <td>{{$row->amount}}</td>
+                      <td>{{$row->note}}</td>
+                      <td>{{$row->created_at}}</td>
+                    </tr>
+                    @endforeach
+             @else 
+                   <tr>
+                      <td colspan="4"><h4>No records found</h4></td>
+                    </tr>  
+              @endif
+
+            </table>
             
           </div>
           <!-- changepaypalemail --> 

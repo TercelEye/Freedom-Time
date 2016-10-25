@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Payment;
+use Auth;
+Use App\User;
 
 
 class PaymentController extends Controller {
@@ -25,19 +27,21 @@ class PaymentController extends Controller {
 						->where('payment_status','Paid')
 						->first();
 		if($found_invoice!=false){
-			return redirect('dashboard');	
+			return redirect('user/paypal-email');	
 		}			
 		
 	   if(session('payment')!=""){
 			$errors[] =  $request->session()->get('payment'); 
 	   }
-	    return view('payment/card_form',compact('errors'));
+	   $user = \Auth::user();
+
+	    return view('payment/card_form',compact('errors','user'));
    }
    public function paynow_process(Request $request){
 	  $payemnt  = new \App\Payment;
 	  
 	  $CardNumber = $request->CardNumber;
-	  $ExpirationDate =  $request->ExpirationDate;
+	  $ExpirationDate =  $request->year."-". $request->month;
 	  $CardCode =  $request->CardCode;
 	  $status = $payemnt->user_billing_manual($CardNumber,$ExpirationDate,$CardCode);
 	  if($status == true){
@@ -45,6 +49,27 @@ class PaymentController extends Controller {
 	  }
 	  return \Redirect::back()->with('status',$status);
    }
+
+   //paypal email after billing
+    public function paypal_email(){
+    	return view('payment.paypal_email');
+    }
+   //store payapal email
+   public function store_paypal_email(Request $request){
+
+   		$this->validate($request,[
+   			 'paypal_email' =>'required|email',
+   		]);
+
+		$auth_user = \Auth::user();
+		$user = User::find($auth_user->id);
+		$user->paypal_email = $request->paypal_email;
+		$user->save();
+
+		return redirect('dashboard');
+   }
+
+
    public function chargeCreditCard($amount=12){
 
 	   

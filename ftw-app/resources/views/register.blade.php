@@ -9,8 +9,13 @@ small {
 </style>
 <section class="main" id="register">
 	<div class="content container">
+
+
+<br><br>
+ @include('layouts.billing_steps')
 		<div class="row">
 			<div class="mainDiv col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3">
+
 				<div class="formWrapper">
 					<a href="#"><h3 class="text-uppercase">Create An Account</h3></a>
 					 <form class="form-horizontal" role="form" method="POST" action="{{ url('/register/'.$username) }}">

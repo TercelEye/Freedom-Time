@@ -16,7 +16,7 @@ Route::get('/', 'HomeController@homepage');
 
 
 //secure routes
-Route::group(['middleware' => ['auth','web']], function () {
+Route::group(['middleware'=>'auth','middlewareGroups' => ['auth','web']], function () {
     Route::get('dashboard', 'UserController@dashboard');
 	Route::post('invitation/send_invitation', 'InviteController@send_invitation');
 	Route::post('invitation/send_affiliate', 'InviteController@send_affiliate');
@@ -32,7 +32,9 @@ Route::group(['middleware' => ['auth','web']], function () {
 	Route::get('user/billing-address', 'PaymentController@billing_address');
 	Route::get('user/billing', 'PaymentController@paynow');
 	Route::post('user/billing', 'PaymentController@paynow_process');
-	Route::get('payment', 'PaymentController@chargeCreditCard');
+	// Route::get('payment', 'PaymentController@chargeCreditCard');
+	Route::get('user/paypal-email', 'PaymentController@paypal_email');
+	Route::post('user/paypal-email', 'PaymentController@store_paypal_email');
 
 });
 	

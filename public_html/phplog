@@ -12877,3 +12877,1779 @@
  Wed, 27 Jul 2016 21:11:14 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1469653873</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>1</responseCode><authCode>S23F4V</authCode><avsResultCode>Y</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode>2</cavvResultCode><transId>40001202871</transId><refTransID /><transHash>53D0891F8504A372A5C3AB42FC62E085</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><messages><message><code>1</code><description>This transaction has been approved.</description></message></messages></transactionResponse></createTransactionResponse>
  Wed, 27 Jul 2016 21:11:14 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
  Wed, 27 Jul 2016 21:11:14 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sun, 02 Oct 2016 18:33:19 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sun, 02 Oct 2016 18:33:19 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest Object
+(
+    [customerProfileId:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => 1500311968
+    [paymentProfile:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => net\authorize\api\contract\v1\CustomerPaymentProfileExType Object
+        (
+            [customerPaymentProfileId:net\authorize\api\contract\v1\CustomerPaymentProfileExType:private] => 1500198596
+            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => xxxx
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-4654
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => 
+            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                (
+                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => asda
+                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => bbbb
+                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 93/b ebuldeniya rd
+                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => hokandara
+                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => 25000
+                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                )
+
+        )
+
+    [validationMode:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 279TGXzQfQ7Z
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Sun, 02 Oct 2016 18:33:20 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sun, 02 Oct 2016 18:33:20 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Sun, 02 Oct 2016 18:33:20 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<updateCustomerPaymentProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[279TGXzQfQ7Z]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <customerProfileId><![CDATA[1500311968]]></customerProfileId>
+  <paymentProfile>
+    <billTo>
+      <firstName><![CDATA[asda]]></firstName>
+      <lastName><![CDATA[bbbb]]></lastName>
+      <address><![CDATA[93/b ebuldeniya rd]]></address>
+      <city><![CDATA[hokandara]]></city>
+      <zip><![CDATA[25000]]></zip>
+      <country><![CDATA[USA]]></country>
+    </billTo>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-4654</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+        <cardCode>xxxx</cardCode>
+      </creditCard>
+    </payment>
+    <customerPaymentProfileId><![CDATA[1500198596]]></customerPaymentProfileId>
+  </paymentProfile>
+</updateCustomerPaymentProfileRequest>
+
+ Sun, 02 Oct 2016 18:33:20 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sun, 02 Oct 2016 18:33:20 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sun, 02 Oct 2016 18:33:23 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><ErrorResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Error</resultCode><message><code>E00003</code><text>The 'AnetApi/xml/v1/schema/AnetApiSchema.xsd:cardNumber' element is invalid - The value XXXXXXXXXXXXXXXXXXX is invalid according to its datatype 'String' - The actual length is greater than the MaxLength value.</text></message></messages></ErrorResponse>
+ Sun, 02 Oct 2016 18:33:23 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sun, 02 Oct 2016 18:33:23 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sun, 02 Oct 2016 18:34:34 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sun, 02 Oct 2016 18:34:34 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest Object
+(
+    [customerProfileId:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => 1500311968
+    [paymentProfile:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => net\authorize\api\contract\v1\CustomerPaymentProfileExType Object
+        (
+            [customerPaymentProfileId:net\authorize\api\contract\v1\CustomerPaymentProfileExType:private] => 1500198596
+            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => xxxx
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-2222
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => 
+            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                (
+                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => asda
+                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => bbbb
+                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 93/b ebuldeniya rd
+                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => hokandara
+                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => 25000
+                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                )
+
+        )
+
+    [validationMode:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 279TGXzQfQ7Z
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Sun, 02 Oct 2016 18:34:34 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sun, 02 Oct 2016 18:34:34 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Sun, 02 Oct 2016 18:34:34 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<updateCustomerPaymentProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[279TGXzQfQ7Z]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <customerProfileId><![CDATA[1500311968]]></customerProfileId>
+  <paymentProfile>
+    <billTo>
+      <firstName><![CDATA[asda]]></firstName>
+      <lastName><![CDATA[bbbb]]></lastName>
+      <address><![CDATA[93/b ebuldeniya rd]]></address>
+      <city><![CDATA[hokandara]]></city>
+      <zip><![CDATA[25000]]></zip>
+      <country><![CDATA[USA]]></country>
+    </billTo>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-2222</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+        <cardCode>xxxx</cardCode>
+      </creditCard>
+    </payment>
+    <customerPaymentProfileId><![CDATA[1500198596]]></customerPaymentProfileId>
+  </paymentProfile>
+</updateCustomerPaymentProfileRequest>
+
+ Sun, 02 Oct 2016 18:34:34 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sun, 02 Oct 2016 18:34:34 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sun, 02 Oct 2016 18:34:36 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><updateCustomerPaymentProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages></updateCustomerPaymentProfileResponse>
+ Sun, 02 Oct 2016 18:34:36 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sun, 02 Oct 2016 18:34:36 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sun, 02 Oct 2016 18:34:36 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sun, 02 Oct 2016 18:34:36 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest Object
+(
+    [customerProfileId:net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest:private] => 1500311968
+    [customerPaymentProfileId:net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest:private] => 1500198596
+    [unmaskExpirationDate:net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 279TGXzQfQ7Z
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1475433274
+)
+
+ Sun, 02 Oct 2016 18:34:36 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sun, 02 Oct 2016 18:34:36 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Sun, 02 Oct 2016 18:34:36 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<getCustomerPaymentProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[279TGXzQfQ7Z]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1475433274]]></refId>
+  <customerProfileId><![CDATA[1500311968]]></customerProfileId>
+  <customerPaymentProfileId><![CDATA[1500198596]]></customerPaymentProfileId>
+</getCustomerPaymentProfileRequest>
+
+ Sun, 02 Oct 2016 18:34:36 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sun, 02 Oct 2016 18:34:36 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sun, 02 Oct 2016 18:34:40 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><getCustomerPaymentProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1475433274</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><paymentProfile><billTo><firstName>asda</firstName><lastName>bbbb</lastName><address>93/b ebuldeniya rd</address><city>hokandara</city><zip>25000</zip><country>USA</country></billTo><customerProfileId>1500311968</customerProfileId><customerPaymentProfileId>1500198596</customerPaymentProfileId><payment><creditCard><cardNumber>XXXX2222</cardNumber><expirationDate>xxxx</expirationDate><cardType>Visa</cardType></creditCard></payment></paymentProfile></getCustomerPaymentProfileResponse>
+ Sun, 02 Oct 2016 18:34:40 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sun, 02 Oct 2016 18:34:40 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sun, 02 Oct 2016 18:34:40 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sun, 02 Oct 2016 18:34:40 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 39.00
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\CustomerProfilePaymentType Object
+                (
+                    [createProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                    [customerProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 1500311968
+                    [paymentProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => net\authorize\api\contract\v1\PaymentProfileType Object
+                        (
+                            [paymentProfileId:net\authorize\api\contract\v1\PaymentProfileType:private] => 1500198596
+                            [cardCode:net\authorize\api\contract\v1\PaymentProfileType:private] => 
+                        )
+
+                    [shippingProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                )
+
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 279TGXzQfQ7Z
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1475433280
+)
+
+ Sun, 02 Oct 2016 18:34:40 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sun, 02 Oct 2016 18:34:40 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Sun, 02 Oct 2016 18:34:40 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[279TGXzQfQ7Z]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1475433280]]></refId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>39.00</amount>
+    <profile>
+      <customerProfileId><![CDATA[1500311968]]></customerProfileId>
+      <paymentProfile>
+        <paymentProfileId><![CDATA[1500198596]]></paymentProfileId>
+      </paymentProfile>
+    </profile>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Sun, 02 Oct 2016 18:34:40 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sun, 02 Oct 2016 18:34:40 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sun, 02 Oct 2016 18:34:42 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1475433280</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>1</responseCode><authCode>VU4QME</authCode><avsResultCode>Y</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode>2</cavvResultCode><transId>40003582838</transId><refTransID /><transHash>7E0F5D8823FBA773356DB39BA6FA8DA6</transHash><testRequest>0</testRequest><accountNumber>XXXX2222</accountNumber><accountType>Visa</accountType><messages><message><code>1</code><description>This transaction has been approved.</description></message></messages><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Sun, 02 Oct 2016 18:34:42 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sun, 02 Oct 2016 18:34:42 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 13:35:12 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 13:35:12 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                                        (
+                                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => xxxx
+                                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-7136
+                                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                                        )
+
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => isurindu
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => prabashwara
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 93/b abuldeniya rd, hookandara south
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => hokandara
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => admin
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Freedomtime Customer
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => isurindu.prabashwara@gmail.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477143310
+)
+
+ Sat, 22 Oct 2016 13:35:13 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 13:35:13 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 13:35:13 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477143310]]></refId>
+  <profile>
+    <description><![CDATA[Freedomtime Customer]]></description>
+    <email><![CDATA[isurindu.prabashwara@gmail.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[isurindu]]></firstName>
+        <lastName><![CDATA[prabashwara]]></lastName>
+        <address><![CDATA[93/b abuldeniya rd, hookandara south]]></address>
+        <city><![CDATA[hokandara]]></city>
+        <zip><![CDATA[admin]]></zip>
+        <country><![CDATA[USA]]></country>
+      </billTo>
+      <payment>
+        <creditCard>
+          <cardNumber>xxxx-7136</cardNumber>
+          <expirationDate>xxxx</expirationDate>
+          <cardCode>xxxx</cardCode>
+        </creditCard>
+      </payment>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Sat, 22 Oct 2016 13:35:13 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 13:35:13 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 13:35:15 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477143310</refId><messages><resultCode>Error</resultCode><message><code>E00007</code><text>User authentication failed due to invalid authentication values.</text></message></messages></createCustomerProfileResponse>
+ Sat, 22 Oct 2016 13:35:15 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 13:35:15 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 16:47:14 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 16:47:14 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                                        (
+                                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => xxxx
+                                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-7136
+                                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                                        )
+
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => isurindu
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => prabashwara
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 93/b abuldeniya rd, hookandara south
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => hokandara
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => admin
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Freedomtime Customer
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => isurindu.prabashwara@gmail.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477154833
+)
+
+ Sat, 22 Oct 2016 16:47:14 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 16:47:14 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 16:47:14 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477154833]]></refId>
+  <profile>
+    <description><![CDATA[Freedomtime Customer]]></description>
+    <email><![CDATA[isurindu.prabashwara@gmail.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[isurindu]]></firstName>
+        <lastName><![CDATA[prabashwara]]></lastName>
+        <address><![CDATA[93/b abuldeniya rd, hookandara south]]></address>
+        <city><![CDATA[hokandara]]></city>
+        <zip><![CDATA[admin]]></zip>
+        <country><![CDATA[USA]]></country>
+      </billTo>
+      <payment>
+        <creditCard>
+          <cardNumber>xxxx-7136</cardNumber>
+          <expirationDate>xxxx</expirationDate>
+          <cardCode>xxxx</cardCode>
+        </creditCard>
+      </payment>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Sat, 22 Oct 2016 16:47:14 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 16:47:14 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 16:47:16 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477154833</refId><messages><resultCode>Error</resultCode><message><code>E00007</code><text>User authentication failed due to invalid authentication values.</text></message></messages></createCustomerProfileResponse>
+ Sat, 22 Oct 2016 16:47:16 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 16:47:16 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 16:48:00 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 16:48:00 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                                        (
+                                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => xxxx
+                                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-7136
+                                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                                        )
+
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => isurindu
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => prabashwara
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 93/b abuldeniya rd, hookandara south
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => hokandara
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => admin
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Freedomtime Customer
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => isurindu.prabashwara@gmail.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477154880
+)
+
+ Sat, 22 Oct 2016 16:48:00 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 16:48:00 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 16:48:00 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477154880]]></refId>
+  <profile>
+    <description><![CDATA[Freedomtime Customer]]></description>
+    <email><![CDATA[isurindu.prabashwara@gmail.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[isurindu]]></firstName>
+        <lastName><![CDATA[prabashwara]]></lastName>
+        <address><![CDATA[93/b abuldeniya rd, hookandara south]]></address>
+        <city><![CDATA[hokandara]]></city>
+        <zip><![CDATA[admin]]></zip>
+        <country><![CDATA[USA]]></country>
+      </billTo>
+      <payment>
+        <creditCard>
+          <cardNumber>xxxx-7136</cardNumber>
+          <expirationDate>xxxx</expirationDate>
+          <cardCode>xxxx</cardCode>
+        </creditCard>
+      </payment>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Sat, 22 Oct 2016 16:48:00 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 16:48:00 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 16:48:01 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477154880</refId><messages><resultCode>Error</resultCode><message><code>E00007</code><text>User authentication failed due to invalid authentication values.</text></message></messages></createCustomerProfileResponse>
+ Sat, 22 Oct 2016 16:48:01 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 16:48:01 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 16:48:18 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 16:48:18 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                                        (
+                                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => xxxx
+                                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-7136
+                                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                                        )
+
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => isurindu
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => prabashwara
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 93/b abuldeniya rd, hookandara south
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => hokandara
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => admin
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Freedomtime Customer
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => isurindu.prabashwara@gmail.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477154898
+)
+
+ Sat, 22 Oct 2016 16:48:18 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 16:48:18 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 16:48:18 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477154898]]></refId>
+  <profile>
+    <description><![CDATA[Freedomtime Customer]]></description>
+    <email><![CDATA[isurindu.prabashwara@gmail.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[isurindu]]></firstName>
+        <lastName><![CDATA[prabashwara]]></lastName>
+        <address><![CDATA[93/b abuldeniya rd, hookandara south]]></address>
+        <city><![CDATA[hokandara]]></city>
+        <zip><![CDATA[admin]]></zip>
+        <country><![CDATA[USA]]></country>
+      </billTo>
+      <payment>
+        <creditCard>
+          <cardNumber>xxxx-7136</cardNumber>
+          <expirationDate>xxxx</expirationDate>
+          <cardCode>xxxx</cardCode>
+        </creditCard>
+      </payment>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Sat, 22 Oct 2016 16:48:18 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 16:48:18 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 16:48:20 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477154898</refId><messages><resultCode>Error</resultCode><message><code>E00007</code><text>User authentication failed due to invalid authentication values.</text></message></messages></createCustomerProfileResponse>
+ Sat, 22 Oct 2016 16:48:20 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 16:48:20 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 16:50:31 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 16:50:31 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                                        (
+                                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => xxxx
+                                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-7136
+                                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                                        )
+
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => isurindu
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => prabashwara
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 93/b abuldeniya rd, hookandara south
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => hokandara
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => admin
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Freedomtime Customer
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => isurindu.prabashwara@gmail.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477155030
+)
+
+ Sat, 22 Oct 2016 16:50:31 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 16:50:31 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 16:50:31 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477155030]]></refId>
+  <profile>
+    <description><![CDATA[Freedomtime Customer]]></description>
+    <email><![CDATA[isurindu.prabashwara@gmail.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[isurindu]]></firstName>
+        <lastName><![CDATA[prabashwara]]></lastName>
+        <address><![CDATA[93/b abuldeniya rd, hookandara south]]></address>
+        <city><![CDATA[hokandara]]></city>
+        <zip><![CDATA[admin]]></zip>
+        <country><![CDATA[USA]]></country>
+      </billTo>
+      <payment>
+        <creditCard>
+          <cardNumber>xxxx-7136</cardNumber>
+          <expirationDate>xxxx</expirationDate>
+          <cardCode>xxxx</cardCode>
+        </creditCard>
+      </payment>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Sat, 22 Oct 2016 16:50:31 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 16:50:31 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 16:50:34 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477155030</refId><messages><resultCode>Error</resultCode><message><code>E00007</code><text>User authentication failed due to invalid authentication values.</text></message></messages></createCustomerProfileResponse>
+ Sat, 22 Oct 2016 16:50:34 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 16:50:34 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 16:54:15 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 16:54:15 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                                        (
+                                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => xxxx
+                                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-7136
+                                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                                        )
+
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => isurindu
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => prabashwara
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 93/b abuldeniya rd, hookandara south
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => hokandara
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => admin
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Freedomtime Customer
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => isurindu.prabashwara@gmail.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477155255
+)
+
+ Sat, 22 Oct 2016 16:54:15 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 16:54:15 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://api2.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 16:54:15 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477155255]]></refId>
+  <profile>
+    <description><![CDATA[Freedomtime Customer]]></description>
+    <email><![CDATA[isurindu.prabashwara@gmail.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[isurindu]]></firstName>
+        <lastName><![CDATA[prabashwara]]></lastName>
+        <address><![CDATA[93/b abuldeniya rd, hookandara south]]></address>
+        <city><![CDATA[hokandara]]></city>
+        <zip><![CDATA[admin]]></zip>
+        <country><![CDATA[USA]]></country>
+      </billTo>
+      <payment>
+        <creditCard>
+          <cardNumber>xxxx-7136</cardNumber>
+          <expirationDate>xxxx</expirationDate>
+          <cardCode>xxxx</cardCode>
+        </creditCard>
+      </payment>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Sat, 22 Oct 2016 16:54:15 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 16:54:15 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 16:54:20 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477155255</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><customerProfileId>1501053277</customerProfileId><customerPaymentProfileIdList><numericString>1501126209</numericString></customerPaymentProfileIdList><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
+ Sat, 22 Oct 2016 16:54:20 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 16:54:20 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 16:54:20 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 16:54:20 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 15
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\CustomerProfilePaymentType Object
+                (
+                    [createProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                    [customerProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 1501053277
+                    [paymentProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => net\authorize\api\contract\v1\PaymentProfileType Object
+                        (
+                            [paymentProfileId:net\authorize\api\contract\v1\PaymentProfileType:private] => 1501126209
+                            [cardCode:net\authorize\api\contract\v1\PaymentProfileType:private] => 
+                        )
+
+                    [shippingProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                )
+
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477155260
+)
+
+ Sat, 22 Oct 2016 16:54:21 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 16:54:21 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://api2.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 16:54:21 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477155260]]></refId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>15</amount>
+    <profile>
+      <customerProfileId><![CDATA[1501053277]]></customerProfileId>
+      <paymentProfile>
+        <paymentProfileId><![CDATA[1501126209]]></paymentProfileId>
+      </paymentProfile>
+    </profile>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Sat, 22 Oct 2016 16:54:21 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 16:54:21 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 16:54:22 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477155260</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>2</responseCode><authCode /><avsResultCode>G</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode /><transId>40019800932</transId><refTransID /><transHash>B7812E9C297EDC1D6DE4BAB9DF04D51E</transHash><testRequest>0</testRequest><accountNumber>XXXX7136</accountNumber><accountType>Visa</accountType><errors><error><errorCode>2</errorCode><errorText>This transaction has been declined.</errorText></error></errors><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Sat, 22 Oct 2016 16:54:22 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 16:54:22 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 16:54:22 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 16:54:22 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 0.10
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\CustomerProfilePaymentType Object
+                (
+                    [createProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                    [customerProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 1501053277
+                    [paymentProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => net\authorize\api\contract\v1\PaymentProfileType Object
+                        (
+                            [paymentProfileId:net\authorize\api\contract\v1\PaymentProfileType:private] => 1501126209
+                            [cardCode:net\authorize\api\contract\v1\PaymentProfileType:private] => 
+                        )
+
+                    [shippingProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                )
+
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477155262
+)
+
+ Sat, 22 Oct 2016 16:54:23 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 16:54:23 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://api2.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 16:54:23 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477155262]]></refId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>0.10</amount>
+    <profile>
+      <customerProfileId><![CDATA[1501053277]]></customerProfileId>
+      <paymentProfile>
+        <paymentProfileId><![CDATA[1501126209]]></paymentProfileId>
+      </paymentProfile>
+    </profile>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Sat, 22 Oct 2016 16:54:23 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 16:54:23 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 16:54:24 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477155262</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>2</responseCode><authCode>394087</authCode><avsResultCode>G</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode /><transId>40019800988</transId><refTransID>40019800988</refTransID><transHash>AFD90748DACA5D68C2E9954BE3FF69C7</transHash><testRequest>0</testRequest><accountNumber>XXXX7136</accountNumber><accountType>Visa</accountType><errors><error><errorCode>27</errorCode><errorText>The transaction has been declined because of an AVS mismatch. The address provided does not match billing address of cardholder.</errorText></error></errors><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Sat, 22 Oct 2016 16:54:24 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 16:54:24 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 16:55:35 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 16:55:35 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest Object
+(
+    [customerProfileId:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => 1501053277
+    [paymentProfile:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => net\authorize\api\contract\v1\CustomerPaymentProfileExType Object
+        (
+            [customerPaymentProfileId:net\authorize\api\contract\v1\CustomerPaymentProfileExType:private] => 1501126209
+            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => xxxx
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-7136
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => 
+            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                (
+                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => isurindu
+                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => prabashwara
+                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 93/b abuldeniya rd, hookandara south
+                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => hokandara
+                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => admin
+                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                )
+
+        )
+
+    [validationMode:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Sat, 22 Oct 2016 16:55:35 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 16:55:35 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://api2.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 16:55:35 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<updateCustomerPaymentProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <customerProfileId><![CDATA[1501053277]]></customerProfileId>
+  <paymentProfile>
+    <billTo>
+      <firstName><![CDATA[isurindu]]></firstName>
+      <lastName><![CDATA[prabashwara]]></lastName>
+      <address><![CDATA[93/b abuldeniya rd, hookandara south]]></address>
+      <city><![CDATA[hokandara]]></city>
+      <zip><![CDATA[admin]]></zip>
+      <country><![CDATA[USA]]></country>
+    </billTo>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-7136</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+        <cardCode>xxxx</cardCode>
+      </creditCard>
+    </payment>
+    <customerPaymentProfileId><![CDATA[1501126209]]></customerPaymentProfileId>
+  </paymentProfile>
+</updateCustomerPaymentProfileRequest>
+
+ Sat, 22 Oct 2016 16:55:35 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 16:55:35 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 16:55:37 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><updateCustomerPaymentProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages></updateCustomerPaymentProfileResponse>
+ Sat, 22 Oct 2016 16:55:37 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 16:55:37 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 16:55:37 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 16:55:37 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest Object
+(
+    [customerProfileId:net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest:private] => 1501053277
+    [customerPaymentProfileId:net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest:private] => 1501126209
+    [unmaskExpirationDate:net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477155335
+)
+
+ Sat, 22 Oct 2016 16:55:37 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 16:55:37 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://api2.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 16:55:37 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<getCustomerPaymentProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477155335]]></refId>
+  <customerProfileId><![CDATA[1501053277]]></customerProfileId>
+  <customerPaymentProfileId><![CDATA[1501126209]]></customerPaymentProfileId>
+</getCustomerPaymentProfileRequest>
+
+ Sat, 22 Oct 2016 16:55:37 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 16:55:37 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 16:55:37 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><getCustomerPaymentProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477155335</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><paymentProfile><billTo><firstName>isurindu</firstName><lastName>prabashwara</lastName><address>93/b abuldeniya rd, hookandara south</address><city>hokandara</city><zip>admin</zip><country>USA</country></billTo><customerProfileId>1501053277</customerProfileId><customerPaymentProfileId>1501126209</customerPaymentProfileId><payment><creditCard><cardNumber>XXXX7136</cardNumber><expirationDate>xxxx</expirationDate><cardType>Visa</cardType></creditCard></payment></paymentProfile></getCustomerPaymentProfileResponse>
+ Sat, 22 Oct 2016 16:55:37 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 16:55:38 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 16:55:38 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 16:55:38 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 0.10
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\CustomerProfilePaymentType Object
+                (
+                    [createProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                    [customerProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 1501053277
+                    [paymentProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => net\authorize\api\contract\v1\PaymentProfileType Object
+                        (
+                            [paymentProfileId:net\authorize\api\contract\v1\PaymentProfileType:private] => 1501126209
+                            [cardCode:net\authorize\api\contract\v1\PaymentProfileType:private] => 
+                        )
+
+                    [shippingProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                )
+
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477155338
+)
+
+ Sat, 22 Oct 2016 16:55:38 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 16:55:38 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://api2.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 16:55:38 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477155338]]></refId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>0.10</amount>
+    <profile>
+      <customerProfileId><![CDATA[1501053277]]></customerProfileId>
+      <paymentProfile>
+        <paymentProfileId><![CDATA[1501126209]]></paymentProfileId>
+      </paymentProfile>
+    </profile>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Sat, 22 Oct 2016 16:55:38 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 16:55:38 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 16:55:39 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477155338</refId><messages><resultCode>Error</resultCode><message><code>E00027</code><text>The transaction was unsuccessful.</text></message></messages><transactionResponse><responseCode>3</responseCode><authCode /><avsResultCode>P</avsResultCode><cvvResultCode /><cavvResultCode /><transId>0</transId><refTransID /><transHash>3F4805D0D43C89039060BE7BE460B66A</transHash><testRequest>0</testRequest><accountNumber>XXXX7136</accountNumber><accountType>Visa</accountType><errors><error><errorCode>11</errorCode><errorText>A duplicate transaction has been submitted.</errorText></error></errors><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Sat, 22 Oct 2016 16:55:39 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 16:55:39 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 17:01:48 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 17:01:48 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest Object
+(
+    [customerProfileId:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => 1501053277
+    [paymentProfile:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => net\authorize\api\contract\v1\CustomerPaymentProfileExType Object
+        (
+            [customerPaymentProfileId:net\authorize\api\contract\v1\CustomerPaymentProfileExType:private] => 1501126209
+            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => xxxx
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-7136
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => 
+            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                (
+                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => isurindu
+                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => prabashwara
+                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 93/b abuldeniya rd, hookandara south
+                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => hokandara
+                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => admin
+                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                )
+
+        )
+
+    [validationMode:net\authorize\api\contract\v1\UpdateCustomerPaymentProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Sat, 22 Oct 2016 17:01:48 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 17:01:48 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://api2.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 17:01:48 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<updateCustomerPaymentProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <customerProfileId><![CDATA[1501053277]]></customerProfileId>
+  <paymentProfile>
+    <billTo>
+      <firstName><![CDATA[isurindu]]></firstName>
+      <lastName><![CDATA[prabashwara]]></lastName>
+      <address><![CDATA[93/b abuldeniya rd, hookandara south]]></address>
+      <city><![CDATA[hokandara]]></city>
+      <zip><![CDATA[admin]]></zip>
+      <country><![CDATA[USA]]></country>
+    </billTo>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-7136</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+        <cardCode>xxxx</cardCode>
+      </creditCard>
+    </payment>
+    <customerPaymentProfileId><![CDATA[1501126209]]></customerPaymentProfileId>
+  </paymentProfile>
+</updateCustomerPaymentProfileRequest>
+
+ Sat, 22 Oct 2016 17:01:48 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 17:01:48 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><updateCustomerPaymentProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages></updateCustomerPaymentProfileResponse>
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 17:01:52 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest Object
+(
+    [customerProfileId:net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest:private] => 1501053277
+    [customerPaymentProfileId:net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest:private] => 1501126209
+    [unmaskExpirationDate:net\authorize\api\contract\v1\GetCustomerPaymentProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477155708
+)
+
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://api2.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<getCustomerPaymentProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477155708]]></refId>
+  <customerProfileId><![CDATA[1501053277]]></customerProfileId>
+  <customerPaymentProfileId><![CDATA[1501126209]]></customerPaymentProfileId>
+</getCustomerPaymentProfileRequest>
+
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><getCustomerPaymentProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477155708</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><paymentProfile><billTo><firstName>isurindu</firstName><lastName>prabashwara</lastName><address>93/b abuldeniya rd, hookandara south</address><city>hokandara</city><zip>admin</zip><country>USA</country></billTo><customerProfileId>1501053277</customerProfileId><customerPaymentProfileId>1501126209</customerPaymentProfileId><payment><creditCard><cardNumber>XXXX7136</cardNumber><expirationDate>xxxx</expirationDate><cardType>Visa</cardType></creditCard></payment></paymentProfile></getCustomerPaymentProfileResponse>
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Sat, 22 Oct 2016 17:01:52 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 0.10
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\CustomerProfilePaymentType Object
+                (
+                    [createProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                    [customerProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 1501053277
+                    [paymentProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => net\authorize\api\contract\v1\PaymentProfileType Object
+                        (
+                            [paymentProfileId:net\authorize\api\contract\v1\PaymentProfileType:private] => 1501126209
+                            [cardCode:net\authorize\api\contract\v1\PaymentProfileType:private] => 
+                        )
+
+                    [shippingProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                )
+
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477155712
+)
+
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://api2.authorize.net/xml/v1/request.api
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477155712]]></refId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>0.10</amount>
+    <profile>
+      <customerProfileId><![CDATA[1501053277]]></customerProfileId>
+      <paymentProfile>
+        <paymentProfileId><![CDATA[1501126209]]></paymentProfileId>
+      </paymentProfile>
+    </profile>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Sat, 22 Oct 2016 17:01:52 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Sat, 22 Oct 2016 17:01:55 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477155712</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>2</responseCode><authCode>762947</authCode><avsResultCode>G</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode /><transId>40019816863</transId><refTransID>40019816863</refTransID><transHash>19FC6CEC111EFA6B276CB192F68EB571</transHash><testRequest>0</testRequest><accountNumber>XXXX7136</accountNumber><accountType>Visa</accountType><errors><error><errorCode>27</errorCode><errorText>The transaction has been declined because of an AVS mismatch. The address provided does not match billing address of cardholder.</errorText></error></errors><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Sat, 22 Oct 2016 17:01:55 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Sat, 22 Oct 2016 17:01:55 +0000 INFO : [execute] (C:\xampp\htdocs\projects\freedom-time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Tue, 25 Oct 2016 10:33:13 +0000 INFO : [execute] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Tue, 25 Oct 2016 10:33:13 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                                        (
+                                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => xxxx
+                                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-7136
+                                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                                        )
+
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => isurindud
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => asdasd
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => asdasd
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => asdasds6
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => adad
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Freedomtime Customer
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => ip@aaa.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477391592
+)
+
+ Tue, 25 Oct 2016 10:33:14 +0000 INFO : [execute] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Tue, 25 Oct 2016 10:33:14 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://api2.authorize.net/xml/v1/request.api
+ Tue, 25 Oct 2016 10:33:14 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477391592]]></refId>
+  <profile>
+    <description><![CDATA[Freedomtime Customer]]></description>
+    <email><![CDATA[ip@aaa.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[isurindud]]></firstName>
+        <lastName><![CDATA[asdasd]]></lastName>
+        <address><![CDATA[asdasd]]></address>
+        <city><![CDATA[asdasds6]]></city>
+        <zip><![CDATA[adad]]></zip>
+        <country><![CDATA[USA]]></country>
+      </billTo>
+      <payment>
+        <creditCard>
+          <cardNumber>xxxx-7136</cardNumber>
+          <expirationDate>xxxx</expirationDate>
+          <cardCode>xxxx</cardCode>
+        </creditCard>
+      </payment>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Tue, 25 Oct 2016 10:33:14 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Tue, 25 Oct 2016 10:33:14 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Tue, 25 Oct 2016 10:33:17 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477391592</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><customerProfileId>303256357</customerProfileId><customerPaymentProfileIdList><numericString>303368032</numericString></customerPaymentProfileIdList><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
+ Tue, 25 Oct 2016 10:33:17 +0000 INFO : [execute] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Tue, 25 Oct 2016 10:33:17 +0000 INFO : [execute] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End
+ Tue, 25 Oct 2016 10:33:17 +0000 INFO : [execute] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 112) - Request Serialization Begin
+ Tue, 25 Oct 2016 10:33:17 +0000 DEBUG : [execute] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 113) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 0.10
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\CustomerProfilePaymentType Object
+                (
+                    [createProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                    [customerProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 303256357
+                    [paymentProfile:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => net\authorize\api\contract\v1\PaymentProfileType Object
+                        (
+                            [paymentProfileId:net\authorize\api\contract\v1\PaymentProfileType:private] => 303368032
+                            [cardCode:net\authorize\api\contract\v1\PaymentProfileType:private] => 
+                        )
+
+                    [shippingProfileId:net\authorize\api\contract\v1\CustomerProfilePaymentType:private] => 
+                )
+
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 5GRfb9zx8ue
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1477391597
+)
+
+ Tue, 25 Oct 2016 10:33:17 +0000 INFO : [execute] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - Request  Serialization End
+ Tue, 25 Oct 2016 10:33:17 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://api2.authorize.net/xml/v1/request.api
+ Tue, 25 Oct 2016 10:33:17 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[5GRfb9zx8ue]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <refId><![CDATA[ref1477391597]]></refId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>0.10</amount>
+    <profile>
+      <customerProfileId><![CDATA[303256357]]></customerProfileId>
+      <paymentProfile>
+        <paymentProfileId><![CDATA[303368032]]></paymentProfileId>
+      </paymentProfile>
+    </profile>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Tue, 25 Oct 2016 10:33:17 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Tue, 25 Oct 2016 10:33:17 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Tue, 25 Oct 2016 10:33:21 +0000 INFO : [_sendRequest] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1477391597</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>2</responseCode><authCode /><avsResultCode>G</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode /><transId>8708473293</transId><refTransID /><transHash>62028890D1AF52668CA787E952CC0AA9</transHash><testRequest>0</testRequest><accountNumber>XXXX7136</accountNumber><accountType>Visa</accountType><errors><error><errorCode>2</errorCode><errorText>This transaction has been declined.</errorText></error></errors><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Tue, 25 Oct 2016 10:33:21 +0000 INFO : [execute] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 125) - Response De-Serialization Begin
+ Tue, 25 Oct 2016 10:33:21 +0000 INFO : [execute] (C:\xampp\htdocs\projects\Freedom-Time\ftw-app\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 127) - Response De-Serialization End

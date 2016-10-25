@@ -95,7 +95,8 @@ class WithdrawController extends Controller
     public function edit($id){
    		$withdraw = Withdraw::findOrFail($id);
         $users    = User::where('is_admin', 0)->get();
-        return view('admin.withdraw.form', compact('withdraw', 'users', 'errors'));
+        $note = true;
+        return view('admin.withdraw.form', compact('withdraw', 'users', 'errors','note'));
     }
 
     public function destroy(Request $request){

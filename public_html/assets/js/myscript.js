@@ -142,7 +142,7 @@ $(function() {
 			$("#changepaypalemail").addClass("displayingOff").removeClass("displayingOn");
 			$("#affiliates").removeClass("displayingOff").addClass("displayingOn");
 			$("#billing").removeClass("displayingOn").addClass("displayingOff");
-		 }else if(getTheConvertedId1 === "fundwithdrawal"){
+		 }else if(getTheConvertedId1 === "yourearnings"){
 			$("#contactinfo").addClass("displayingOff").removeClass("displayingOn");
 			$("#changepassword").addClass("displayingOff").removeClass("displayingOn");
 			$("#changepaypalemail").removeClass("displayingOff").addClass("displayingOn");

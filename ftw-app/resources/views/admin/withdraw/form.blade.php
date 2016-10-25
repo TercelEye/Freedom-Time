@@ -8,7 +8,9 @@
 <div class="panel">
 	<div class="panel-content">
 
-
+@if (isset($note) )
+    <div class="alert alert-info">note : You can not update withdrawal record.if you need to update ? delete this record and re create</div>
+@endif
 @if (count($errors) > 0)
     <div class="alert alert-danger">
         <ul>

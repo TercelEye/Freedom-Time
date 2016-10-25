@@ -16,7 +16,8 @@
 <thead>
 	<tr> 
         <th>ID</th> 
-    	<th>User</th> 
+        <th>User</th> 
+    	<th>Paypal email</th> 
         <th>Amount</th> 
         <th>Note</th> 
            <th></th> 
@@ -27,7 +28,8 @@
     	@foreach($withdraws as $row)
         	<tr>
             	<td>{{ $row->id }}</td>
-                <td>{{ $row->amount }}</td>
+                <td>{{ $row->user->username }}</td>
+                <td>{{ $row->user->paypal_email }}</td>
                 <td>{{ $row->amount }}</td>
                 <td>{{ $row->note }}</td>
                 <td> <a href="{{ url('admin/wthdraw/edit/'.$row->id) }}">view</a></td>

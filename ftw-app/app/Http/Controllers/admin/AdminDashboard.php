@@ -23,7 +23,7 @@ class AdminDashboard extends Controller
 
 	//get all affiliates 
 	private function get_all_affiliates(){
-		return User::where('is_admin',0)->get()->count();
+		return User::where('is_admin',0)->where('paymentprofileid','!=','')->get()->count();
 	}
 	//get all affiliates 
 	private function get_admin(){

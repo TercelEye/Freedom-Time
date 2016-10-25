@@ -153,7 +153,7 @@ $.ajaxSetup({
 <footer class="page" id="footer">
   <div class="content container-fluid">
     <div class="row paragraphRow">
-      <p class="text-center">info@freedomtimeandwealth.com</p>
+      <p class="text-center">info@sbpro.net</p>
     </div>
   </div>
 </footer>

@@ -8,6 +8,7 @@ use Validator;
 use App\User;
 use App\Invoice;
 use App\Fund;
+use App\Withdraw;
 use App\Affiliates;
 use Illuminate\Http\Request;
 
@@ -44,14 +45,15 @@ class UserController extends Controller
 					->where('payment_status','Paid')
 					->first();
 		if($found_invoice==false && Auth::user()->is_admin != 1){
-			return redirect('user/billing-address');	
+			return redirect('user/billing');	
 		}
 		$fund = \App\Fund::where('user_id',$user->id)->first();
 		$invoices = \App\Invoice::where('user_id',$user->id)->get();
+		$withdraws = Withdraw::where('user_id',$user->id)->get();
 		
 		$category = \App\TrainingCategory::with('training')->get();
 					
-		return view('dashboard',compact('user','fund','invoices','category'));
+		return view('dashboard',compact('user','fund','invoices','category','withdraws'));
 	}
 	public function register(Request $request, $username){
 		$user = \App\User::where('username', $username)->first();

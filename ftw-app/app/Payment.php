@@ -19,10 +19,10 @@ class Payment  {
 	private $_MERCHANT_LOGIN_ID = "5GRfb9zx8ue";
 	private $_MERCHANT_TRANSACTION_KEY = "4HEs4hL4894nyHV7";
 	
-	private $_fee =39;
+	private $_fee =19.95;//19.95
 	private $_interval =30; // days
 	
-	private $_inviter_commision = 5;
+	private $_inviter_commision = 4;
 	private $_parent_inviter_commision = 3;
 	
 	public function set_funds($user_id,$amount){
@@ -182,7 +182,7 @@ class Payment  {
 	  $request->setRefId( $refId);
 	  $request->setProfile($customerprofile);
 	  $controller = new AnetController\CreateCustomerProfileController($request);
-	  $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::SANDBOX);
+	  $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::PRODUCTION);
 	  if (($response != null) && ($response->getMessages()->getResultCode() == "Ok") )
 	  {
 
@@ -195,6 +195,10 @@ class Payment  {
 		  $user->paymentprofileid = $paymentprofileid;
 		  $user->save();
 		  
+
+		  // $tresponse = $this->chargeCustomerProfile($profile_id,$paymentprofileid,15);
+		  // print_r($tresponse);
+
 		  return $this->charge_current_user();
 		 // return array('profile_id'=>$profile_id,'paymentprofileid'=>$paymentprofileid);
 		  	
@@ -203,17 +207,20 @@ class Payment  {
 		  //echo "SUCCESS: PAYMENT PROFILE ID : " .$paymentprofileid  . "\n";
 		  
 		  //echo "<br><br>";
-		  $tresponse = $this->chargeCustomerProfile($profile_id,$paymentprofileid,15);
-		  print_r($tresponse);
+		  
 	   }
 	  else
 	  {
+  
 		  $errorMessages = $response->getMessages()->getMessage();
+	  	// echo "ERROR :  Invalid response\n";
+		  
+    //       echo "Response : " . $errorMessages[0]->getCode() . "  " .$errorMessages[0]->getText() . "\n";
+    //       exit;
+
 		  \Session::flash('payment',$errorMessages[0]->getText());
 		  return false;
-		  echo "ERROR :  Invalid response\n";
 		  
-          echo "Response : " . $errorMessages[0]->getCode() . "  " .$errorMessages[0]->getText() . "\n";
 	  }
 	  return $response;
   }
@@ -291,7 +298,7 @@ class Payment  {
 	  $request->setPaymentProfile( $paymentprofile );
 
 	  $controller = new AnetController\UpdateCustomerPaymentProfileController($request);
-	  $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::SANDBOX);
+	  $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::PRODUCTION);
 	  if (($response != null) && ($response->getMessages()->getResultCode() == "Ok") )
 	  {
 		 //echo "Update Customer Payment Profile SUCCESS: " . "\n";
@@ -305,7 +312,7 @@ class Payment  {
 		 $getRequest->setCustomerPaymentProfileId($customerPaymentProfileId);
 
 		 $controller = new AnetController\GetCustomerPaymentProfileController($getRequest);
-		 $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::SANDBOX);
+		 $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::PRODUCTION);
 		 if(($response != null)){
 			  if ($response->getMessages()->getResultCode() == "Ok")
 			  {
@@ -367,7 +374,7 @@ class Payment  {
     $request->setRefId( $refId);
     $request->setTransactionRequest( $transactionRequestType);
     $controller = new AnetController\CreateTransactionController($request);
-    $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::SANDBOX);
+    $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::PRODUCTION);
     if ($response != null)
     {
       $tresponse = $response->getTransactionResponse();
